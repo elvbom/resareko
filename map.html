@@ -6,11 +6,34 @@
   <meta name="description" content="website description" />
   <meta name="keywords" content="website keywords, website keywords" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" /><script src="style/resareko.js"></script>
+
+  <script src="http://maps.google.com/maps/api/js?sensor=false&libraries=places" type="text/javascript"></script>
+
 </head>
 
-<body>
-  <div id="main">
+<body onload="initialize();">
+    <div id="container">
+          <div id="header">
+            <div id="logo">
+              <a href="index.html"><img src="img/resareko_vit.png" height="150dp"></a>
+            </div>
+            <div>
+              <ul id="menu">
+                <li><a href="index.html">FEED</a></li>
+                <li class="selected"><a href="map.html">KARTA</a></li>
+                <li><a href="about.html">OM RESA REKO</a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="footer">
+            COPYRIGHT &copy; RESA REKO 2019 | INSTAGRAM <a href="instagram.com/resareko">@RESAREKO</a>
+          </div>
+        <div id="map">
+        </div>
+    </div>
+
+  <!--<div id="main">
 
     <div id="header">
       <div id="logo">
@@ -18,7 +41,6 @@
       </div>
       <div id="menubar">
         <ul id="menu">
-          <li>SÖK</li>
           <li><a href="index.html">FEED</a></li>
           <li class="selected"><a href="map.html">KARTA</a></li>
           <li><a href="about.html">OM RESA REKO</a></li>
@@ -26,13 +48,12 @@
       </div>
       <div id="content">
         <p>Här är en kartvy över alla ställen vi postat om.</p>
-        <iframe id="map" src="https://snapwidget.com/embed/674486" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
-      </div>
-    </div>
+        <iframe id="map" src="https://snapwidget.com/embed/674751" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:750px; height:500px"></iframe>
 
-    <div id="footer">
-      COPYRIGHT &copy; RESA REKO 2019 | INSTAGRAM <a href="instagram.com/resareko">@RESAREKO</a>
-    </div>
+
+      </div>
+    </div>-->
+
 
   </div>
 </body>
