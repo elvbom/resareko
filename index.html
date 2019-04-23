@@ -3,39 +3,38 @@
 
 <head>
   <title>Resa reko - resa + hållbart = yeah!</title>
-  <meta name="description" content="website description" />
-  <meta name="keywords" content="website keywords, website keywords" />
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+  <meta name="description" content="website description"/>
+  <meta name="keywords" content="website keywords, website keywords"/>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style"/>
+
+  <!-- Open layers -->
+  <link rel="stylesheet" href="leaflet/leaflet.css" />
 </head>
 
 <body>
+  <div id="map" class="map" /></div>
+
+  <script src="leaflet/leaflet.js"></script>
+  <script src="main.js"></script>
+
   <div id="main">
-
-    <div id="logo">
-        <a href="http://www.instagram.com/resareko"><img src="img/resareko_svart.png" height="150dp"></a>
-    </div>
-
     <div id="header">
+      <div id="logo">
+          <a target="_blank" href="http://www.instagram.com/resareko"><img src="img/resareko_svart.png" height="100dp"></a>
+      </div>
 
       <div id="menubar">
         <ul id="menu">
           <li class="selected"><a href="index.html">KARTA</a></li>
-          <!--<li><a href="http://www.instagram.com/resareko">FEED</a></li>-->
           <li><a href="about.html">OM RESA REKO</a></li>
         </ul>
-      </div>
-
-      <div id="content">
-        <p>Här är en kartvy över alla ställen vi har postat om.</p>
-        <iframe id="map" src="https://snapwidget.com/embed/674868" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no">
-        </iframe>
       </div>
 
     </div>
 
     <div id="footer">
-      &copy; RESA REKO 2019 | INSTAGRAM <a href="http://www.instagram.com/resareko">@RESAREKO</a>
+      &copy; RESA REKO 2019 | INSTAGRAM <a target="_blank" href="http://www.instagram.com/resareko">@RESAREKO</a>
     </div>
 
   </div>
