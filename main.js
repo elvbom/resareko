@@ -1,46 +1,69 @@
 function createMap(elemId, centerLat, centerLng, zoom) {
-    var map = new L.Map(elemId);
- 
+  var map = new L.Map(elemId, {
+    zoomControl: false
+  });
+
+  L.control.zoom({
+    position: 'bottomright'
+  }).addTo(map);
+
     // Data provider
     var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
     var osmAttrib = 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors';
- 
-    // Layer
+
     var osmLayer = new L.TileLayer(osmUrl, {
-        minZoom: 2,
-        zoomControl: false,
-        attribution: osmAttrib
+      minZoom: 2,
+      zoomControl: false,
+      attribution: osmAttrib
     });
- 
-    // Map
+
     map.setView(new L.LatLng(centerLat, centerLng), zoom);
     map.addLayer(osmLayer);
     return map;
-}
+  }
 
-
-function addMarker(map, latLng, onClick) {
+  function addMarker(map, latLng, onClick) {
     var marker = L.marker(latLng).addTo(map);
     if (onClick !== null) {
-        marker.on('click', onClick);
+      marker.on('click', onClick);
     }
     return marker;
-}
+  }
 
-document.addEventListener("DOMContentLoaded", function () {
-    markersLatLng = [
-        [46.056946, 14.505751]
-    ];
-
-    function onMarkerClick(e) {
-        window.open ('https://www.instagram.com/p/BvrN4pqh_hv/', 
-            '_blank');
-        win.focus();
+  document.addEventListener("DOMContentLoaded", function () {
+    function onMarkerClick(e, link) {
+      window.open (link, 
+        '_blank');
+      win.focus();
     }
 
-    var markerInfos = document.getElementById("markerInfos");
-    var map = createMap('map', 55, 15, 4);
-    markersLatLng.forEach(function(latLng) {
-        addMarker(map, latLng, onMarkerClick);
-    });
-});
+    function makeMarkers(m, perRow) {
+      i = 0; j = 0; 
+      markers = [];
+
+      while (i < m.length) {
+        markers[j] = {coord: [m[i], m[i + 1]], uri: m[i + 2]}; 
+        i = i + 3; j = j + 1;
+      }
+      return markers
+    }
+
+    var locations = new XMLHttpRequest();
+    locations.open("GET", "loc.csv", true);
+    locations.onreadystatechange = function () {
+      if(locations.readyState === 4) {
+        if(locations.status === 200 || locations.status == 0) {
+          var map = createMap('map', 55, 15, 4);
+
+          var markers = makeMarkers(locations.responseText.split(","));
+          i = 0;
+          for(i = 0; i < markers.length; i++) {
+            L.marker(markers[i].coord).on('click', function(e) {
+              window.open (markers[e.target._leaflet_id].uri, '_blank');
+            }).addTo(map)._leaflet_id = i;
+          }
+        }
+      }
+    }
+    locations.send(null);
+  });

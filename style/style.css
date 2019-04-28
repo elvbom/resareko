@@ -50,15 +50,16 @@ li a:hover, li.selected a, li.selected a:hover {
 }
 
 #header {
-  width: 50%;
+  width: 100%;
   margin-right: 0;
   padding: 1%;
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
 }
 
 #logo { 
   margin-right: 2%;
+  margin-left: 2%;
   float: right;
   display: block;
   overflow: hidden;
