@@ -1,5 +1,9 @@
 function createMap(elemId, centerLat, centerLng, zoom) {
+  var world = new L.LatLngBounds([[90,-180],[-90,180]]);
+
   var map = new L.Map(elemId, {
+    maxBounds: world,
+    maxBoundsViscosity: 1,
     zoomControl: false
   });
 
