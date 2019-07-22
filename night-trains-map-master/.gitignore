@@ -1,0 +1,6 @@
+background
+map*.png
+.lock*
+.~lock*
+Makefile.local
+routes.hi

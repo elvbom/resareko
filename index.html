@@ -2,41 +2,87 @@
 <html>
 
 <head>
-  <title>Resa reko - resa + hållbart = yeah!</title>
-  <meta name="description" content="website description"/>
-  <meta name="keywords" content="website keywords, website keywords"/>
+  <title>Resa reko = yeah!</title>
+  <meta name="description" content="Resa reko har en hemsida för alla som planerar tågluff, tågresa, tågsemester, bussemester eller annan typ av hållbar semester eller resande."/>
+  <meta name="keywords" content="resa reko, tågsemester, tågluff, tågluffa, semester i sverige, semester i norden, resa i sverige, resa i norden, tågsemester i sverige, tågsemester i norden, tågsemester i europa, tågresa, tågresor, hållbart resande, klimatsmart resande, klimatsmart semester, flygfritt"/>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="stylesheet" type="text/css" href="style/style.css" title="style"/>
-
-  <link rel="stylesheet" href="leaflet/leaflet.css" />
+  <link rel="stylesheet" type="text/css" href="style/leaflet.css" title="style"/>
+  
+  <link rel="icon" href="img/resareko_icon.png">
+  <link rel="stylesheet" href="leaflet/leaflet.css"/>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/form.js"></script>
 </head>
 
 <body>
-  <div id="map" class="map" /></div>
+  <header>
+    <a target="_blank" href="http://www.instagram.com/resareko">
+      <img class="logo" id="logo_big" src="img/resareko_svart.png">
+      <img class="logo" id="logo_small" src="img/resareko_svart_liten.png">
+    </a>
+    <div id="menubar">
+      <ul id="menu">
+        <li class="selected"><a href="/">karta</a></li>  
+        <li><a href="/about.html">om oss</a></li>    
+      </ul>
+      <div class="dropdown">
+        <button class="dropbtn"><img src="img/menu.png" width="20px" class="menu_icons"></button>
+        <div class="dropdown-content">
+          <ul>
+              <li class="selected"><a href="/">kartan</a></li>
+              <li><a href="/about.html">om oss</a></li>
+            </ul>
+        </div>
+      </div>
+      <a href="https://open.spotify.com/show/05cv47EJys1IZtTXDoVZYH?si=iQwrCOcoRIah0CJCQDZGgg" target="_blank" class="link_icons">
+        <img src="img/pod.png" width="20px" class="menu_icons">
+      </a>
+      <a href="http://www.instagram.com/resareko" target="_blank" class="link_icons">
+        <img src="img/insta.png" width="20px" class="menu_icons">
+      </a>
+      <a href="/blogg" target="_blank" class="link_icons">
+        <img src="img/blog.png" width="20px" class="menu_icons">
+      </a>
+    </div>
+
+    <button id="addLocation" class="rotated">Jag vill lägga till ett resmål på kartan!</button>
+    <div id="modalLocation" class="modal">
+      <form class="modal-content" method="post" action="email_form.php">
+        <span class="close">&times;</span>
+        <h4>Föreslå ett nytt resmål till kartan</h4>
+        <p>Vet du något härligt resmål som inte finns på kartan än? Fyll i formuläret så lägger vi till det.</p>
+        <p class="locQuestion">Platsens namn:</p>
+        <p class="locQuestionItalic">(ange longitud och latitud om den inte har ett namn)
+        <input name="name" required><!-- fixme geokodning förslag --></input>
+        <p class="locQuestion">Varför ska man åka hit?<p/>
+        <p class="locQuestionItalic">(gärna med tips på aktiviteter, boende, rolig kuriosa osv.)</p>
+        <textarea name="why" cols="30" rows="2" required></textarea> <!-- fixme required -->
+        <p class="locQuestion">Hur tar man sig hit?</p>
+        <textarea name="how" cols="30" rows="2"></textarea>
+        <!--<p class="locQuestion">Har du en bild från platsen?<p/>
+        <p class="locQuestionItalic">(måste vara tagen av dig pga copyright)</p>
+        <input class="inputImage" type="file" name="pic" accept="image/*">-->
+        <p class="locQuestion">Vill du ha cred för tipset? Skriv ditt namn och ev. konton på sociala medier:</p>
+        <input name="credit"></input>
+        <p class="locQuestion">Vad är din email?<p/>
+        <p class="locQuestionItalic">(används för att skicka infon till oss - kommer inte synas på hemsidan)</p>
+        <input name="email" type="email" cols="40" rows="5" required></input>
+        <br/>
+        <input type="submit" id="submit" value="Skicka in" />
+      </form>
+    </div>
+  </header>
+
+  <div id="map" class="map"/></div>
 
   <script src="leaflet/leaflet.js"></script>
-  <script src="papa/papaparse.js"></script>
-  <script src="main.js"></script>
+  <script src="scripts/map.js"></script>
 
-  <div id="main">
-    <div id="header">
-      <div id="logo">
-          <a target="_blank" href="http://www.instagram.com/resareko"><img src="img/resareko_svart.png" height="130dp"></a>
-      </div>
-
-      <!--<div id="menubar">
-        <ul id="menu">
-          <li class="selected"><a href="index.html">KARTA</a></li>
-          <li><a href="about.html">OM RESA REKO</a></li>
-        </ul>
-      </div>-->
-
-    </div>
-
-    <div id="footer">
-      &copy; RESA REKO 2019 | INSTAGRAM <a target="_blank" href="http://www.instagram.com/resareko">@RESAREKO</a>
-    </div>
-
+  <div id="footer">
+    &copy; RESA REKO 2019 | INSTAGRAM <a target="_blank" href="http://www.instagram.com/resareko">@RESAREKO</a> | EMAIL HEJ@RESAREKO.SE</a>
   </div>
 </body>
+
 </html>

@@ -1,0 +1,10 @@
+check and add routes
+====================
+Riga-Minsk
+
+done
+====
+separete Wien-Bregenz/Zurich
+separete Kaliningrad-S:t Petersburg/Moscow
+correct route Wien-[Salzburg]-Vienna
+
