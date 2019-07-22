@@ -2,44 +2,76 @@
 <html>
 
 <head>
-  <title>Resa reko - resa + hållbart = yeah!</title>
-  <meta name="description" content="website description" />
-  <meta name="keywords" content="website keywords, website keywords" />
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+  <title>Resa reko = yeah!</title>
+  <meta name="description" content="Resa reko har en hemsida för alla som planerar tågluff, tågresa, tågsemester, bussemester eller annan typ av hållbar semester eller resande."/>
+  <meta name="keywords" content="resa reko, tågsemester, tågluff, tågluffa, semester i sverige, semester i norden, resa i sverige, resa i norden, tågsemester i sverige, tågsemester i norden, tågsemester i europa, tågresa, tågresor, hållbart resande, klimatsmart resande, klimatsmart semester, flygfritt"/>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style"/>
+  <link rel="stylesheet" type="text/css" href="style/leaflet.css" title="style"/>
+  
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/resareko_icon.png">
+  <script src="scripts/main.js"></script>
 </head>
 
 <body>
-  <div id="main">
-
-    <div id="logo">
-        <a href="http://www.instagram.com/resareko"><img src="img/resareko_svart.png" height="150dp"></a>
-    </div>
-
-    <div id="header">
-
-      <div id="menubar">
-        <ul id="menu">
-          <li ><a href="index.html">KARTA</a></li>
-          <!--<li><a href="http://www.instagram.com/resareko">FEED</a></li>-->
-          <li class="selected"><a href="about.html">OM RESA REKO</a></li>
-        </ul>
+  <header>
+    <a target="_blank" href="http://www.instagram.com/resareko">
+      <img class="logo" id="logo_big" src="img/resareko_svart.png">
+      <img class="logo" id="logo_small" src="img/resareko_svart_liten.png">
+    </a>
+    <div id="menubar">
+      <ul id="menu">
+        <li>
+          <a href="/">karta</a>
+        </li>
+        <li class="selected">
+          <a href="/about.html">om oss</a>
+        </li>    
+      </ul>
+      <div class="dropdown">
+        <button class="dropbtn"><img src="img/menu.png" width="20px" class="menu_icons"></button>
+        <div class="dropdown-content">
+          <ul>
+            <li><a href="/">kartan</a></li>
+            <li class="selected"><a href="/about.html">om oss</a></li>
+          </ul>
+        </div>
       </div>
-
-      <div id="content">
-        <p><a href="instagram.com/resareko">@resareko</a> började som ett Instagram-konto om flygfria resande och har nu även utökats med en podd (samt den här hemsidan). 
-        <br/><br/>
-        Vi som startade kontot - Arnúlfur och Elvira - gillar att resa men är inte lika förtjusta i klimatförändringar, och kombinationen av de två tankarna födde idén till att sprida information om hållbara resor.
-        <br/><br/>
-        Om du vill få tag på oss får du gärna skicka ett meddelande till oss på Instagram.</p>
-      </div>
-      
+      <a href="https://open.spotify.com/show/05cv47EJys1IZtTXDoVZYH?si=iQwrCOcoRIah0CJCQDZGgg" target="_blank" class="link_icons">
+        <img src="img/pod.png" width="20px" class="menu_icons">
+      </a>
+      <a href="http://www.instagram.com/resareko" target="_blank" class="link_icons">
+        <img src="img/insta.png" width="20px" class="menu_icons">
+      </a>
+      <a href="/blogg" target="_blank" class="link_icons">
+        <img src="img/blog.png" width="20px" class="menu_icons">
+      </a>
     </div>
+  </header>
 
-    <div id="footer">
-      &copy; RESA REKO 2019 | INSTAGRAM <a href="http://www.instagram.com/resareko">@RESAREKO</a>
-    </div>
+  <div class="content">
+    <h1>Om oss</h1>
+    <p>
+      Resa reko startade som ett Instagram-konto i januari 2019, som en produkt av lika delar klimatångest och resglädje. Nu finns det en podd och en hemsida också, där man kan hitta både ett och annat tips eller källa till inspiration för hållbart resande. Ja, eller det är i alla fall ambitionen.
+    </p>
+    <br/>
+    <p>
+      Vi som driver Resa reko heter Arnúlfur och Elvira och förenas i en passion för klimatsmart leverne och en ständigt pockande reslust, oavsett om det är med tåg, buss, cykel eller en sån där futuristisk hybridfärja.
+    </p>
+    <br/>
+    <p>
+      Vill du komma i kontakt med oss skickar du med fördel ett DM på <a href="http://www.instagram.com/resareko">Instagram</a> eller ett hederligt gammalt mail till hej@resareko.se. 
+    </p>
+    <br/>
+    <p>
+      Väl mött!
+    </p>
+  </div>
 
+  <div id="footer">
+    &copy; RESA REKO 2019 | INSTAGRAM <a target="_blank" href="http://www.instagram.com/resareko">@RESAREKO</a> | EMAIL HEJ@RESAREKO.SE</a>
   </div>
 </body>
 </html>
