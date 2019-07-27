@@ -4,10 +4,10 @@ html {
 
 * { 
   margin: 0;
-  padding: 0;
+  padding: 0;https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=2ahUKEwj9qpvOhNHjAhXRAxAIHbGQDO0QFjAAegQIAxAB&url=https%3A%2F%2Fstackoverflow.com%2Fquestions%2F6703228%2Fhow-to-force-a-list-to-be-vertical-using-html-css%2F38097067&usg=AOvVaw1mbZdi6xY5mQbQjGzhtItv
 }
 
-@media (max-width: 510px){
+@media (max-width: 610px){
   header {
     height: 50px;
   }
@@ -29,7 +29,7 @@ html {
     background-color: #F0EFEF;
   }
 
-  .dropdown .dropbtn {
+  .dropbtn {
     border: none;
     outline: none;
     background-color: inherit;
@@ -74,29 +74,31 @@ html {
 
   .logo {
     float: left;
-    width: 15%;
-  }
-
-  #logo_big {
-    width: 75px;
+    width: 85px;
     display: inline;
     padding-left: 10px;
   }
 
-  #logo_small {
-    display: none;
-  }
-
-  #addLocation {
+  #add_location {
     padding: 7px;
   }
 
-  #footer {
-    visibility: hidden;
+  .corner-ribbon {
+    width: 250px;
+    bottom: 30px;
+    left: -60px;
+  }
+
+  .corner-ribbon img {
+    height: 30px;
+  }
+
+  .footer_big {
+    display: none;
   }
 }
 
-@media (min-width: 511px){
+@media (min-width: 611px){
   header {
     height: 60px;
   }
@@ -128,26 +130,33 @@ html {
   }
 
   .logo {
+    display: inline;
     float: left;
     padding: 1%;
     width: 15%;
   }
 
-  #logo_big {
-    display: inline;
-  }
-
-  #logo_small {
-    display: none;
-  }
-
-  #addLocation {
+  #add_location {
     padding: 10px;
+  }
+
+  .corner-ribbon {
+    width: 300px;
+    bottom: 40px;
+    left: -80px;
+  }
+
+  .corner-ribbon img {
+    height: 40px;
+  }
+
+  .footer_small {
+    display: none;
   }
 }
 
 body { 
-  font: normal 1em Helvetica, Arial, sans-serif;
+  font: normal 1em "Noto Sans", sans-serif;
 }
 
 header {
@@ -157,18 +166,16 @@ header {
   z-index: 100;
 }
 
-#addLocation {
-  /*border-radius: 10px;*/
+#add_location {
   position: fixed;
-  margin-top: 23px;
+  margin-top: 30px;
   right: 0;
-  padding: 12px;
   border-style: none;
   background: rgba(255, 255, 255, 0.7);
-  font-size: 0.6em;
+  font: normal 0.6em "Noto Sans", sans-serif;
 }
 
-#addLocation:hover {
+#add_location:hover {
   background: rgb(255, 165, 0);
   color: white;
 }
@@ -192,7 +199,7 @@ header {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
-  font: normal .8em arial, sans-serif;
+  font: normal .8em "Noto Sans", sans-serif;
 }
 
 #modalLocation h4 {
@@ -230,6 +237,7 @@ header {
   padding: 15px;
   margin-top: 15px;
   border: none;
+  background: lightgrey;
 }
 
 .modal-content {
@@ -238,6 +246,7 @@ header {
   padding: 20px;
   border: none;
   max-width: 450px;
+  margin-bottom: 65px;
 }
 
 .close {
@@ -301,7 +310,28 @@ li a:hover, li.selected a {
 }
 
 .content h1 {
+  font-family: "Fjalla One";
+  font-weight: normal;
   margin-bottom: 5%;
+}
+
+.content p {
+  line-height: 1.4;
+}
+
+.content li {
+  margin-right: 40px;
+}
+
+.content li p {
+  letter-spacing: 0.1em;
+  display: inline;
+}
+
+.content h4 {
+  font-family: "Fjalla One";
+  display: inline;
+  margin-right: 10px;
 }
 
 #map {
@@ -326,24 +356,43 @@ li a:hover, li.selected a {
   font-size: 1.5em;
 }
 
-#podd {
-  font: normal 3em Helvetica, Arial, sans-serif;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 60%;
-  transform: translate(-50%, -50%);
+.corner-ribbon {
+  top: auto;
+  text-align: center;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  background: white;
+  z-index: 1;
+  position: fixed;
+}
+
+.corner-ribbon a {
+  text-decoration: none;
 }
 
 #footer { 
-  margin: 1%;
-  padding: 0.5%;
+  width: 100%;
+  padding-bottom: 10px;
   background: white;
-  font: normal .5em arial, sans-serif;
+  font: normal .5em "Noto Sans", sans-serif;
   letter-spacing: 0.1em;
   bottom: 0;
   position: fixed;
   z-index: 1;
+}
+
+#footer hr {
+  background-color: lightgrey;
+  height: 1px;
+  border: 0;
+  margin-bottom: 10px;
+}
+
+#footer p {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 #footer a { 

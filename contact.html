@@ -3,28 +3,27 @@
 
 <head>
   <title>Resa reko = yeah!</title>
-  <meta name="description" content="website description"/>
-  <meta name="keywords" content="website keywords, website keywords"/>
+  <meta name="description" content="Resa reko - en plattform för alla som gillar klimatmsarta resor. Här är det resor med tåg, buss, fraktfartyg och diverse andra hållbara färdmedel för hela slanten."/>
+  <meta name="keywords" content="resa reko, konferens, hållbar konferens, klimatsmart konferens, tågsemester, tågluff, tågluffa, semester i sverige, semester i norden, resa i sverige, resa i norden, tågsemester i sverige, tågsemester i norden, tågsemester i europa, tågresa, tågresor, hållbart resande, klimatsmart resande, klimatsmart semester, flygfritt"/>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="stylesheet" type="text/css" href="style/style.css" title="style"/>
-  
-  <link href="https://fonts.googleapis.com/css?family=Mandali&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style/leaflet.css" title="style"/>
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Noto+Sans&display=swap" rel="stylesheet">
   <link rel="icon" href="img/resareko_icon.png">
-  <link rel="stylesheet" href="leaflet/leaflet.css"/>
   <script src="scripts/main.js"></script>
 </head>
 
-<body>  
+<body>
   <header>
     <a target="_blank" href="http://www.instagram.com/resareko">
       <img class="logo" src="img/resareko_svart.png">
     </a>
     <div id="menubar">
       <ul id="menu">
-        <li><a href="/">karta</a></li>  
-        <li><a href="/about.html">om oss</a></li> 
-        <li><a href="/contact">kontakt</a></li>      
+        <li><a href="/">karta</a></li>     
+        <li><a href="/about">om oss</a></li>    
+        <li class="selected"><a href="/contact">kontakt</a></li>  
       </ul>
       <div class="dropdown">
         <button class="dropbtn"><img src="img/menu.png" width="20px" class="menu_icons"></button>
@@ -32,7 +31,7 @@
           <ul>
             <li><a href="/">kartan</a></li>
             <li><a href="/about">om oss</a></li>
-            <li><a href="/contact">kontakt</a></li>    
+            <li class="selected"><a href="/contact">kontakt</a></li>  
           </ul>
         </div>
       </div>
@@ -48,13 +47,25 @@
     </div>
   </header>
 
-  <div class="centered" id="error">
-    <p>Något gick fel...</p>
-    <p>Gå tillbaka till <a href="/">startsidan</a></p>
+  <div class="content">
+    <h1>Hör av dig</h1>
+    <p>
+      Frågor, tankar, förslag? Kontakta oss på
+    </p>
+    <br/>
+    <ul>
+      <li><h4>EMAIL</h4><p>hej@resareko.se</p></li>
+      <li><h4>INSTAGRAM</h4><a href="http://www.instagram.com">@resareko</a></li>
   </div>
 
   <div id="footer">
+    <hr>
+    <p class="footer_big">
       &copy; RESA REKO 2019 | INSTAGRAM <a target="_blank" href="http://www.instagram.com/resareko">@RESAREKO</a> | EMAIL HEJ@RESAREKO.SE</a>
+    </p>
+    <p class="footer_small">
+      &copy; RESA REKO 2019 | <a target="_blank" href="http://www.instagram.com/resareko">@RESAREKO</a> | HEJ@RESAREKO.SE</a>
+    </p>
   </div>
 </body>
 </html>

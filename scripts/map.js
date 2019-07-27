@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
   map.on('click', onMapClick);*/
 
   var modal = document.getElementById("modalLocation");
-  var btn = document.getElementById("addLocation");
+  var btn = document.getElementById("add_location");
   var span = document.getElementsByClassName("close")[0];
   btn.onclick = function() {
     modal.style.display = "block";

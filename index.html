@@ -3,13 +3,13 @@
 
 <head>
   <title>Resa reko = yeah!</title>
-  <meta name="description" content="Resa reko har en hemsida för alla som planerar tågluff, tågresa, tågsemester, bussemester eller annan typ av hållbar semester eller resande."/>
+  <meta name="description" content="Resa reko - en plattform för alla som gillar klimatmsarta resor. Här är det resor med tåg, buss, fraktfartyg och diverse andra hållbara färdmedel för hela slanten."/>
   <meta name="keywords" content="resa reko, tågsemester, tågluff, tågluffa, semester i sverige, semester i norden, resa i sverige, resa i norden, tågsemester i sverige, tågsemester i norden, tågsemester i europa, tågresa, tågresor, hållbart resande, klimatsmart resande, klimatsmart semester, flygfritt"/>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="stylesheet" type="text/css" href="style/style.css" title="style"/>
   <link rel="stylesheet" type="text/css" href="style/leaflet.css" title="style"/>
-  
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Noto+Sans&display=swap" rel="stylesheet">
   <link rel="icon" href="img/resareko_icon.png">
   <link rel="stylesheet" href="leaflet/leaflet.css"/>
   <script src="scripts/main.js"></script>
@@ -19,20 +19,21 @@
 <body>
   <header>
     <a target="_blank" href="http://www.instagram.com/resareko">
-      <img class="logo" id="logo_big" src="img/resareko_svart.png">
-      <img class="logo" id="logo_small" src="img/resareko_svart_liten.png">
+      <img class="logo" src="img/resareko_svart.png">
     </a>
     <div id="menubar">
       <ul id="menu">
-        <li class="selected"><a href="/">karta</a></li>  
-        <li><a href="/about.html">om oss</a></li>    
+        <li class="selected"><a href="/">karta</a></li>
+        <li><a href="/about">om oss</a></li>  
+        <li><a href="/contact">kontakt</a></li>    
       </ul>
       <div class="dropdown">
         <button class="dropbtn"><img src="img/menu.png" width="20px" class="menu_icons"></button>
         <div class="dropdown-content">
           <ul>
               <li class="selected"><a href="/">kartan</a></li>
-              <li><a href="/about.html">om oss</a></li>
+              <li><a href="/about">om oss</a></li>
+              <li><a href="/contact">kontakt</a></li>    
             </ul>
         </div>
       </div>
@@ -47,12 +48,12 @@
       </a>
     </div>
 
-    <button id="addLocation" class="rotated">Jag vill lägga till ett resmål på kartan!</button>
+    <button id="add_location" class="rotated">Jag vill tipsa om ett resmål!</button>
     <div id="modalLocation" class="modal">
       <form class="modal-content" method="post" action="email_form.php">
         <span class="close">&times;</span>
-        <h4>Föreslå ett nytt resmål till kartan</h4>
-        <p>Vet du något härligt resmål som inte finns på kartan än? Fyll i formuläret så lägger vi till det.</p>
+        <h4>Tipsa om ett resmål</h4>
+        <p>Vet du något fint resmål som inte finns på kartan än? Fyll i och skicka in formuläret så kan vi lägga till det. Ju mer utförligt desto bättre!</p>
         <p class="locQuestion">Platsens namn:</p>
         <p class="locQuestionItalic">(ange longitud och latitud om den inte har ett namn)
         <input name="name" required><!-- fixme geokodning förslag --></input>
@@ -80,8 +81,11 @@
   <script src="leaflet/leaflet.js"></script>
   <script src="scripts/map.js"></script>
 
-  <div id="footer">
-    &copy; RESA REKO 2019 | INSTAGRAM <a target="_blank" href="http://www.instagram.com/resareko">@RESAREKO</a> | EMAIL HEJ@RESAREKO.SE</a>
+  <div class="corner-ribbon">
+    <a href="https://www.awin1.com/cread.php?s=2174647&v=6005&q=338604&r=615651" target="_blank">
+      <img src="img/buy-interrail.png" border="0">
+    </a>
+
   </div>
 </body>
 
